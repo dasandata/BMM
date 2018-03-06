@@ -3,6 +3,11 @@
 yum -y install dstat
 ```
 
+## Total
+```bash
+dstat -t -d -n $((60*1))
+```
+
 ## Network
 ```bash
 dstat -tnN total,em4,em1 $((60*60))
