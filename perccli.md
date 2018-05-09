@@ -82,7 +82,7 @@ the respective commands.
 ```
 *출력 예>*
 ```
-[root@pheonix:Linux]# /opt/MegaRAID/perccli/perccli64 /c0 show
+[root@hostname:Linux]# /opt/MegaRAID/perccli/perccli64 /c0 show
 Generating detailed summary of the adapter, it may take a while to complete.
 
 Controller = 0
