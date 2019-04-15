@@ -13,10 +13,11 @@ dasandata 2019-04.
 1. 장비 모델 및 ipmi 지원여부 확인.
 2. ipmi 설치.
 3. ipmi 네트워크 및 관리자 계정설정.
-  3.1 Dell 13G 서버 ipmi 설정.
-  3.2 Dell 14G 서버 ipmi 설정.
-  3.3 SuperMicro 서버 ipmi 설정.
-  3.4 Intel 서버 ipmi 설정.
+  - 3.1 Dell 13G 서버 ipmi 설정.
+  - 3.2 Dell 14G 서버 ipmi 설정.
+  - 3.3 SuperMicro 서버 ipmi 설정.
+  - 3.4 Intel 서버 ipmi 설정.
+4. Intel 서버 ipmi 설정.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -32,7 +33,7 @@ dmidecode -T system | grep "Product Name:"
 > Product Name: SYS-4048B-TRFT
 > Product Name: S2600CWR
 
-```bash 
+```bash
 # ipmi 지원여부 확인.
 dmidecode  | grep  -A10  IPMI
 ```
@@ -84,7 +85,7 @@ ipmitool delloem lan set dedicated
 ipmitool lan print
 ```
 ##### 출력 예>
-> [root@dell_13G:~]# ipmitool lan print 
+> [root@dell_13G:~]# ipmitool lan print
 Set in Progress         : Set Complete
 Auth Type Support       : NONE MD2 MD5 PASSWORD
 Auth Type Enable        : Callback : MD2 MD5 PASSWORD
@@ -135,11 +136,11 @@ ipmitool user set password 2  PassWord
 ipmitool user list 1
 ```
 ##### 출력 예>
-> [root@dell_13G:~]# 
+> [root@dell_13G:~]#
 [root@dell_13G:~]# ipmitool user set name 2 ADMIN
 [root@dell_13G:~]# ipmitool user set password 2  PassWord
 Set User Password command successful (user 2)
-[root@dell_13G:~]# 
+[root@dell_13G:~]#
 [root@dell_13G:~]# ipmitool user list 2
 ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 1                    true    false      false      NO ACCESS
@@ -158,8 +159,8 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 14                   true    false      false      NO ACCESS
 15                   true    false      false      NO ACCESS
 16                   true    false      false      NO ACCESS
-[root@dell_13G:~]# 
-[root@dell_13G:~]# 
+[root@dell_13G:~]#
+[root@dell_13G:~]#
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -179,7 +180,7 @@ ipmitool delloem lan get
 ipmitool lan print
 ```
 ##### 출력 예>
-> [root@dell_14G:~]# ipmitool lan print 
+> [root@dell_14G:~]# ipmitool lan print
 Set in Progress         : Set Complete
 Auth Type Support       : NONE MD2 MD5 PASSWORD
 Auth Type Enable        : Callback : MD2 MD5 PASSWORD
@@ -230,11 +231,11 @@ ipmitool user set password 2  PassWord
 ipmitool user list 1
 ```
 ##### 출력 예>
-> [root@dell_14G:~]# 
+> [root@dell_14G:~]#
 [root@dell_14G:~]# ipmitool user set name 2 ADMIN
 [root@dell_14G:~]# ipmitool user set password 2  PassWord
 Set User Password command successful (user 2)
-[root@dell_14G:~]# 
+[root@dell_14G:~]#
 [root@dell_14G:~]# ipmitool user list 2
 ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 1                    true    false      false      NO ACCESS
@@ -253,8 +254,8 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 14                   true    false      false      NO ACCESS
 15                   true    false      false      NO ACCESS
 16                   true    false      false      NO ACCESS
-[root@dell_14G:~]# 
-[root@dell_14G:~]# 
+[root@dell_14G:~]#
+[root@dell_14G:~]#
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -266,7 +267,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 # 현재 모드 확인.
 ipmitool raw 0x30 0x70 0x0c 0
 ```
-표) 출력 결과별 상태 
+표) 출력 결과별 상태
 
 |출력된 값|현재 모드|
 | - | - |
@@ -305,7 +306,7 @@ ipmitool raw 0x30 0x70 0x0c 0     # mode recheck
 ipmitool lan print
 ```
 ##### 출력 예>
-> [root@SuperMicro:~]# ipmitool lan print 
+> [root@SuperMicro:~]# ipmitool lan print
 Set in Progress         : Set Complete
 Auth Type Support       : NONE MD2 MD5 PASSWORD
 Auth Type Enable        : Callback : MD2 MD5 PASSWORD
@@ -353,14 +354,14 @@ ipmitool lan set  1  access   on
 ```bash
 ipmitool user set name 2 ADMIN
 ipmitool user set password 2  PassWord
-ipmitool user list 
+ipmitool user list
 ```
 ##### 출력 예>
-> [root@SuperMicro:~]# 
+> [root@SuperMicro:~]#
 [root@SuperMicro:~]# ipmitool user set name 2 ADMIN
 [root@SuperMicro:~]# ipmitool user set password 2  PassWord
 Set User Password command successful (user 2)
-[root@SuperMicro:~]# 
+[root@SuperMicro:~]#
 [root@SuperMicro:~]# ipmitool user list 2
 ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 1                    true    false      false      NO ACCESS
@@ -379,8 +380,8 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 14                   true    false      false      NO ACCESS
 15                   true    false      false      NO ACCESS
 16                   true    false      false      NO ACCESS
-[root@SuperMicro:~]# 
-[root@SuperMicro:~]# 
+[root@SuperMicro:~]#
+[root@SuperMicro:~]#
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -406,7 +407,7 @@ shared with failover lom2
 ipmitool lan print 3
 ```
 ##### 출력 예>
-> [root@Intel:~]# ipmitool lan 3 print 
+> [root@Intel:~]# ipmitool lan 3 print
 Set in Progress         : Set Complete
 Auth Type Support       : NONE MD2 MD5 PASSWORD
 Auth Type Enable        : Callback : MD2 MD5 PASSWORD
@@ -460,12 +461,12 @@ ipmitool user set password 3  PassWord
 ipmitool user list 1
 ```
 ##### 출력 예>
-> [root@Intel:~]# 
+> [root@Intel:~]#
 [root@Intel:~]# ipmitool user enable 3
 [root@Intel:~]# ipmitool user set name 3 ADMIN
 [root@Intel:~]# ipmitool user set password 3  PassWord
 Set User Password command successful (user 3)
-[root@SuperMicro:~]# 
+[root@SuperMicro:~]#
 [root@SuperMicro:~]# ipmitool user list 1
 ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 1                    false   false      true       ADMINISTRATOR
@@ -483,22 +484,23 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 13                   true    false      false      NO ACCESS
 14                   true    false      false      NO ACCESS
 15                   true    false      false      NO ACCESS
-[root@Intel:~]# 
-[root@Intel:~]# 
+[root@Intel:~]#
+[root@Intel:~]#
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### 3.5 원격 제어 테스트.
+## 4. 원격 제어 테스트.
 
-```bash 
+```bash
 ipmitool -I lanplus -H  <IPMI_IP> -U ADMIN -P  <PassWord>  power status
 ```
 
-** # 클러스터 환경 등, 여러대의 시스템 확인. **(/etc/hosts 에 ipmi ip 입력)
+** # 클러스터 환경 등, 여러대의 시스템 확인. ** (/etc/hosts 에 ipmi ip 입력)
 ```bash
 for I in $(seq 0 10) ; do echo "node${I}" `date "+%Y-%m-%d %H:%M:%S"`
 ipmitool -I lanplus -H node${I}.ipmi -U ADMIN -P 123456qwer!  power status
 ```
+
 ##### 출력 예>
 >node0 2019-04-15 10:26:03
 Chassis Power is on
