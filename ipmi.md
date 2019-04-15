@@ -38,17 +38,19 @@ dmidecode -T system | grep "Product Name:"
 dmidecode  | grep  -A10  IPMI
 ```
 ##### 출력 예>
-> IPMI Device Information  
->> Interface Type: KCS (Keyboard Control Style)  
+```
+IPMI Device Information  
+        Interface Type: KCS (Keyboard Control Style)  
         Specification Version: 2.0  
         I2C Slave Address: 0x10  
         NV Storage Device: Not Present  
         Base Address: 0x0000000000000CA2 (I/O)  
         Register Spacing: Successive Byte Boundaries  
 
-> Handle 0x0023, DMI type 16, 23 bytes  
-> Physical Memory Array  
->> Location: System Board Or Motherboard  
+Handle 0x0023, DMI type 16, 23 bytes  
+Physical Memory Array  
+        Location: System Board Or Motherboard  
+```
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -85,16 +87,17 @@ ipmitool delloem lan set dedicated
 ipmitool lan print
 ```
 ##### 출력 예>
-> [root@dell_13G:~]# ipmitool lan print  
+```
+[root@dell_13G:~]# ipmitool lan print  
 Set in Progress         : Set Complete  
 Auth Type Support       : NONE MD2 MD5 PASSWORD  
 Auth Type Enable        : Callback : MD2 MD5 PASSWORD  
->>  : User     : MD2 MD5 PASSWORD  
+                        : User     : MD2 MD5 PASSWORD  
                         : Operator : MD2 MD5 PASSWORD  
                         : Admin    : MD2 MD5 PASSWORD  
                         : OEM      : MD2 MD5 PASSWORD  
 
-> IP Address Source       : DHCP Address  
+IP Address Source       : DHCP Address  
 IP Address              : 0.0.0.0  
 Subnet Mask             : 0.0.0.0  
 MAC Address             : 0c:c4:7a:8b:f3:3d  
@@ -109,15 +112,15 @@ Backup Gateway MAC      : 00:00:00:00:00:00
 802.1q VLAN Priority    : 0  
 RMCP+ Cipher Suites     : 1,2,3,6,7,8,11,12  
 Cipher Suite Priv Max   : XaaaXXaaaXXaaXX  
->> :     X=Cipher Suite Unused  
+                        :     X=Cipher Suite Unused  
                         :     c=CALLBACK  
                         :     u=USER  
                         :     o=OPERATOR  
                         :     a=ADMIN  
                         :     O=OEM  
 
-> Bad Password Threshold  : Not Available  
-
+Bad Password Threshold  : Not Available  
+```
 
 #### 3.1.3 Dell 13G ipmi 네트워크 ip 설정.
 
@@ -137,7 +140,8 @@ ipmitool user set password 2  PassWord
 ipmitool user list 1
 ```
 ##### 출력 예>
-> [root@dell_13G:~]#  
+```
+[root@dell_13G:~]#  
 [root@dell_13G:~]# ipmitool user set name 2 ADMIN  
 [root@dell_13G:~]# ipmitool user set password 2  PassWord  
 Set User Password command successful (user 2)  
@@ -162,7 +166,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 16                   true    false      false      NO ACCESS  
 [root@dell_13G:~]#  
 [root@dell_13G:~]#  
-
+```
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### 3.2 Dell 14G 서버 ipmi 설정.
@@ -181,16 +185,17 @@ ipmitool delloem lan get
 ipmitool lan print
 ```
 ##### 출력 예>
-> [root@dell_14G:~]# ipmitool lan print  
+```
+[root@dell_14G:~]# ipmitool lan print  
 Set in Progress         : Set Complete  
 Auth Type Support       : NONE MD2 MD5 PASSWORD  
 Auth Type Enable        : Callback : MD2 MD5 PASSWORD  
->>  : User     : MD2 MD5 PASSWORD  
+                        : User     : MD2 MD5 PASSWORD  
                         : Operator : MD2 MD5 PASSWORD  
                         : Admin    : MD2 MD5 PASSWORD  
                         : OEM      : MD2 MD5 PASSWORD  
 
-> IP Address Source       : DHCP Address  
+IP Address Source       : DHCP Address  
 IP Address              : 0.0.0.0  
 Subnet Mask             : 0.0.0.0  
 MAC Address             : 0c:c4:7a:8b:f3:3d  
@@ -205,15 +210,15 @@ Backup Gateway MAC      : 00:00:00:00:00:00
 802.1q VLAN Priority    : 0  
 RMCP+ Cipher Suites     : 1,2,3,6,7,8,11,12  
 Cipher Suite Priv Max   : XaaaXXaaaXXaaXX  
->> :     X=Cipher Suite Unused  
+                        :     X=Cipher Suite Unused  
                         :     c=CALLBACK  
                         :     u=USER  
                         :     o=OPERATOR  
                         :     a=ADMIN  
                         :     O=OEM  
 
-> Bad Password Threshold  : Not Available  
-
+Bad Password Threshold  : Not Available  
+```
 
 #### 3.2.3 Dell 14G ipmi 네트워크 ip 설정.
 
@@ -233,7 +238,8 @@ ipmitool user set password 2  PassWord
 ipmitool user list 1
 ```
 ##### 출력 예>
-> [root@dell_14G:~]#  
+```
+[root@dell_14G:~]#  
 [root@dell_14G:~]# ipmitool user set name 2 ADMIN  
 [root@dell_14G:~]# ipmitool user set password 2  PassWord  
 Set User Password command successful (user 2)  
@@ -258,6 +264,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 16                   true    false      false      NO ACCESS  
 [root@dell_14G:~]#  
 [root@dell_14G:~]#  
+```
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -269,6 +276,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 # 현재 모드 확인.
 ipmitool raw 0x30 0x70 0x0c 0
 ```
+
 표) 출력 결과별 상태
 
 |출력된 값|현재 모드|
@@ -278,9 +286,11 @@ ipmitool raw 0x30 0x70 0x0c 0
 |02 | Failover |
 
 ##### 출력 예>
->[root@SuperMicro ~]# ipmitool raw 0x30 0x70 0x0c 0
- 02
-[root@SuperMicro ~]#
+```
+[root@SuperMicro ~]# ipmitool raw 0x30 0x70 0x0c 0
+ 02    
+[root@SuperMicro ~]#  
+```
 
 #### 3.3.1 SuperMicro ipmi interface 를 dedicated mode 로 변경.
 
@@ -297,10 +307,12 @@ ipmitool raw 0x30 0x70 0x0c 0     # mode recheck
 ```
 ##### 출력 예>
 
-> [root@SuperMicro ~]# ipmitool raw 0x30 0x70 0x0c 1 0  
+```
+[root@SuperMicro ~]# ipmitool raw 0x30 0x70 0x0c 1 0  
 [root@SuperMicro ~]# ipmitool raw 0x30 0x70 0x0c 0  
  00  
 [root@SuperMicro ~]#  
+```
 
 
 #### 3.3.2 SuperMicro ipmi 네트워크 설정상태 확인.
@@ -308,16 +320,17 @@ ipmitool raw 0x30 0x70 0x0c 0     # mode recheck
 ipmitool lan print
 ```
 ##### 출력 예>
-> [root@SuperMicro:~]# ipmitool lan print  
+```
+[root@SuperMicro:~]# ipmitool lan print  
 Set in Progress         : Set Complete  
 Auth Type Support       : NONE MD2 MD5 PASSWORD  
 Auth Type Enable        : Callback : MD2 MD5 PASSWORD  
->>  : User     : MD2 MD5 PASSWORD  
+                        : User     : MD2 MD5 PASSWORD  
                         : Operator : MD2 MD5 PASSWORD  
                         : Admin    : MD2 MD5 PASSWORD  
                         : OEM      : MD2 MD5 PASSWORD  
 
-> IP Address Source       : DHCP Address  
+IP Address Source       : DHCP Address  
 IP Address              : 0.0.0.0  
 Subnet Mask             : 0.0.0.0  
 MAC Address             : 0c:c4:7a:8b:f3:3d  
@@ -332,15 +345,15 @@ Backup Gateway MAC      : 00:00:00:00:00:00
 802.1q VLAN Priority    : 0  
 RMCP+ Cipher Suites     : 1,2,3,6,7,8,11,12  
 Cipher Suite Priv Max   : XaaaXXaaaXXaaXX  
->> :     X=Cipher Suite Unused  
+                        :     X=Cipher Suite Unused  
                         :     c=CALLBACK  
                         :     u=USER  
                         :     o=OPERATOR  
                         :     a=ADMIN  
                         :     O=OEM  
 
-> Bad Password Threshold  : Not Available  
-
+Bad Password Threshold  : Not Available  
+```
 
 #### 3.3.3 SuperMicro ipmi 네트워크 ip 설정.
 
@@ -360,7 +373,8 @@ ipmitool user set password 2  PassWord
 ipmitool user list
 ```
 ##### 출력 예>
-> [root@SuperMicro:~]#  
+```
+[root@SuperMicro:~]#  
 [root@SuperMicro:~]# ipmitool user set name 2 ADMIN  
 [root@SuperMicro:~]# ipmitool user set password 2  PassWord  
 Set User Password command successful (user 2)  
@@ -385,6 +399,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 16                   true    false      false      NO ACCESS  
 [root@SuperMicro:~]#  
 [root@SuperMicro:~]#  
+```
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -397,29 +412,32 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 ipmitool delloem lan get
 ```
 ##### 출력 예>
->[root@Intel:~]# ipmitool delloem lan get  
+```
+[root@Intel:~]# ipmitool delloem lan get  
 shared with failover lom2  
 [root@Intel:~]#  
+```
 
-** # Intel 은 dedicated 가 아닌 경우 변경하는 ipmi 명령 없음.**
+**# Intel 은 dedicated 가 아닌 경우 변경하는 ipmi 명령 없음.**
 
 #### 3.4.2 Intel ipmi 네트워크 설정상태 확인.
 
-** # Intel dedicated Port 의 Channel 이 3번으로 고정되어 있어, 반드시 지정해 주어야 함.**
+**# Intel dedicated Port 의 Channel 이 3번으로 고정되어 있어, 반드시 지정해 주어야 함.**
 ```bash
 ipmitool lan print 3
 ```
 ##### 출력 예>
-> [root@Intel:~]# ipmitool lan 3 print  
+```
+[root@Intel:~]# ipmitool lan 3 print  
 Set in Progress         : Set Complete  
 Auth Type Support       : NONE MD2 MD5 PASSWORD  
 Auth Type Enable        : Callback : MD2 MD5 PASSWORD  
->>  : User     : MD2 MD5 PASSWORD  
+                        : User     : MD2 MD5 PASSWORD  
                         : Operator : MD2 MD5 PASSWORD  
                         : Admin    : MD2 MD5 PASSWORD  
                         : OEM      : MD2 MD5 PASSWORD  
 
-> IP Address Source       : DHCP Address  
+IP Address Source       : DHCP Address  
 IP Address              : 0.0.0.0  
 Subnet Mask             : 0.0.0.0  
 MAC Address             : 0c:c4:7a:8b:f3:3d  
@@ -434,15 +452,15 @@ Backup Gateway MAC      : 00:00:00:00:00:00
 802.1q VLAN Priority    : 0  
 RMCP+ Cipher Suites     : 1,2,3,6,7,8,11,12  
 Cipher Suite Priv Max   : XaaaXXaaaXXaaXX  
->> :     X=Cipher Suite Unused  
+                        :     X=Cipher Suite Unused  
                         :     c=CALLBACK  
                         :     u=USER  
                         :     o=OPERATOR  
                         :     a=ADMIN  
                         :     O=OEM  
 
-> Bad Password Threshold  : Not Available  
-
+Bad Password Threshold  : Not Available  
+```
 
 #### 3.4.3 Intel ipmi 네트워크 ip 설정.
 
@@ -465,7 +483,8 @@ ipmitool user set password 3  PassWord
 ipmitool user list 1
 ```
 ##### 출력 예>
-> [root@Intel:~]#  
+```
+[root@Intel:~]#  
 [root@Intel:~]# ipmitool user enable 3  
 [root@Intel:~]# ipmitool user set name 3 ADMIN  
 [root@Intel:~]# ipmitool user set password 3  PassWord  
@@ -490,7 +509,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 15                   true    false      false      NO ACCESS  
 [root@Intel:~]#  
 [root@Intel:~]#  
-
+```
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -503,12 +522,14 @@ ipmitool -I lanplus -H  IPMI_IP -U ADMIN -P  PassWord  power status
 **# 클러스터 환경 등, 여러대의 시스템 확인.** (/etc/hosts 에 ipmi ip 입력)
 
 ```bash
-for I in $(seq 0 10) ; do echo "node${I} date +%Y-%m-%d %H:%M:%S"
+for I in $(seq 0 10) ; do echo "node${I}" `date ""+%Y-%m-%d %H:%M:%S"`
 ipmitool -I lanplus -H node${I}.ipmi -U ADMIN -P PassWord  power status
+done
 ```
 
 ##### 출력 예>
-> node0 2019-04-15 10:26:03
+```
+node0 2019-04-15 10:26:03
 Chassis Power is on
 node1 2019-04-15 10:26:03
 Chassis Power is on
@@ -530,6 +551,6 @@ node9 2019-04-15 10:26:05
 Chassis Power is on
 node10 2019-04-15 10:26:05
 Chassis Power is on
-
+```
 
 ## end.
