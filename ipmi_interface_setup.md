@@ -10,14 +10,23 @@ dasandata 2019-04.
 
 ## 순서.
 
-1. 장비 모델 및 ipmi 지원여부 확인.
-2. ipmi 설치.
-3. ipmi 네트워크 및 관리자 계정설정.
-  - 3.1 Dell 13G 서버 ipmi 설정.
-  - 3.2 Dell 14G 서버 ipmi 설정.
-  - 3.3 SuperMicro 서버 ipmi 설정.
-  - 3.4 Intel 서버 ipmi 설정.
-4. Intel 서버 ipmi 설정.
+1. [장비 모델 및 ipmi 지원여부 확인.][1]
+2. [ipmi 설치.][2]
+3. [ipmi 네트워크 및 관리자 계정설정.][3]
+  - [3.1 Dell 13G 서버 ipmi 설정.][3-1]
+  - [3.2 Dell 14G 서버 ipmi 설정.][3-2]
+  - [3.3 SuperMicro 서버 ipmi 설정.][3-3]
+  - [3.4 Intel 서버 ipmi 설정.][3-4]
+4. [Intel 서버 ipmi 설정.][4]
+
+[1]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#1-%EC%9E%A5%EB%B9%84-%EB%AA%A8%EB%8D%B8-%EB%B0%8F-ipmi-%EC%A7%80%EC%9B%90%EC%97%AC%EB%B6%80-%ED%99%95%EC%9D%B8
+[2]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#2-ipmitool-%EC%84%A4%EC%B9%98
+[3]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#3-ipmi-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B0%8F-%EA%B4%80%EB%A6%AC%EC%9E%90-%EA%B3%84%EC%A0%95%EC%84%A4%EC%A0%95
+[3-1]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#31-dell-13g-%EC%84%9C%EB%B2%84-ipmi-%EC%84%A4%EC%A0%95
+[3-2]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#32-dell-14g-%EC%84%9C%EB%B2%84-ipmi-%EC%84%A4%EC%A0%95
+[3-3]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#33-supermicro-%EC%84%9C%EB%B2%84-ipmi-%EC%84%A4%EC%A0%95
+[3-4]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#34-intel-%EC%84%9C%EB%B2%84-ipmi-%EC%84%A4%EC%A0%95
+[4]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#4-%EC%9B%90%EA%B2%A9-%EC%A0%9C%EC%96%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
