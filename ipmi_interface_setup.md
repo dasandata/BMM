@@ -35,7 +35,7 @@ dasandata 2019-04.
 
 ```bash
 # 모델 확인.
-dmidecode -T system | grep "Product Name:"
+dmidecode --type system | grep "Product Name:"
 ```
 ##### 출력 예>
 > Product Name: PowerEdge R730  
