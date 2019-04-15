@@ -76,7 +76,7 @@ ipmitool delloem lan get
 ```
 > dedicated
 
-**# dedicated 가 아닌 경우 변경.**
+**# dedicated 가 아닐때 dedicated 로 변경하는 경우 .**
 
 ```bash
 ipmitool delloem lan set dedicated
@@ -177,8 +177,7 @@ ipmitool delloem lan get
 ```
 > dedicated  
 
-** # Dell 14G 는 dedicated 가 아닌 경우 변경하는 ipmi 명령 없음.**
-
+**# Dell 14G 는 dedicated 가 아닌 경우 변경하는 ipmi 명령 없음.**
 
 #### 3.2.2 Dell 14G ipmi 네트워크 설정상태 확인.
 ```bash
@@ -422,7 +421,7 @@ shared with failover lom2
 
 #### 3.4.2 Intel ipmi 네트워크 설정상태 확인.
 
-**# Intel dedicated Port 의 Channel 이 3번으로 고정되어 있어, 반드시 지정해 주어야 함.**
+**# Intel 의 ipmi dedicated Port 의 Channel 이 3번으로 고정되어 있어, 반드시 지정해 주어야 함.**
 ```bash
 ipmitool lan print 3
 ```
@@ -474,7 +473,7 @@ ipmitool lan set  3  access   on
 
 #### 3.4.4 Intel ipmi 관리자 계정 설정.
 
-** # Intel 은 2번 사용자의 이름을 변경할 수 없어, 3번 사용자를 추가해 줍니다.**
+**# Intel 은 2번 사용자의 이름을 변경할 수 없어, 사용자 3번을 활성화 하고 이름을 변경 합니다.**
 
 ```bash
 ipmitool user enable 3
@@ -516,39 +515,50 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 ## 4. 원격 제어 테스트.
 
 ```bash
-ipmitool -I lanplus -H  IPMI_IP -U ADMIN -P  PassWord  power status
+ipmitool -I lanplus -H  <IPMI_IP>  -U ADMIN -P  PassWord  power status
 ```
 
-**# 클러스터 환경 등, 여러대의 시스템 확인.** (/etc/hosts 에 ipmi ip 입력)
+**# 클러스터 환경 등, 여러대의 시스템 확인.**
+(사전에 /etc/hosts 에 ipmi ip 입력)
 
 ```bash
-for I in $(seq 0 10) ; do echo "node${I}" `date ""+%Y-%m-%d %H:%M:%S"`
+for I in $(seq 0 10) ; do echo node${I} `date "+%Y-%m-%d %H:%M:%S"`
 ipmitool -I lanplus -H node${I}.ipmi -U ADMIN -P PassWord  power status
-done
+echo ; done
 ```
 
 ##### 출력 예>
 ```
 node0 2019-04-15 10:26:03
 Chassis Power is on
+
 node1 2019-04-15 10:26:03
 Chassis Power is on
+
 node2 2019-04-15 10:26:04
 Chassis Power is on
+
 node3 2019-04-15 10:26:04
 Chassis Power is on
+
 node4 2019-04-15 10:26:04
 Chassis Power is on
+
 node5 2019-04-15 10:26:04
 Chassis Power is on
+
 node6 2019-04-15 10:26:05
 Chassis Power is on
+
 node7 2019-04-15 10:26:05
 Chassis Power is on
+
 node8 2019-04-15 10:26:05
 Chassis Power is on
+
 node9 2019-04-15 10:26:05
 Chassis Power is on
+
 node10 2019-04-15 10:26:05
 Chassis Power is on
 ```
