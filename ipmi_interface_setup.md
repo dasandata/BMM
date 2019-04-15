@@ -27,10 +27,11 @@ dasandata 2019-04.
 [3-3]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#33-supermicro-%EC%84%9C%EB%B2%84-ipmi-%EC%84%A4%EC%A0%95
 [3-4]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#34-intel-%EC%84%9C%EB%B2%84-ipmi-%EC%84%A4%EC%A0%95
 [4]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#4-%EC%9B%90%EA%B2%A9-%EC%A0%9C%EC%96%B4-%ED%85%8C%EC%8A%A4%ED%8A%B8
+[Title]:https://github.com/dasandata/BMM/blob/master/ipmi_interface_setup.md#ipmi-setup-to--dell--supermicro--intel--server
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-## 1. 장비 모델 및 ipmi 지원여부 확인.
+## [1. 장비 모델 및 ipmi 지원여부 확인.][Title]
 
 ```bash
 # 모델 확인.
@@ -63,7 +64,7 @@ Physical Memory Array
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-## 2. ipmitool 설치.
+## [2. ipmitool 설치.][Title]
 
 ```bash
 yum install ipmitool
@@ -71,13 +72,13 @@ yum install ipmitool
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-## 3. ipmi 네트워크 및 관리자 계정설정.
+## [3. ipmi 네트워크 및 관리자 계정설정.][Title]
 
 Dell, SuperMicro, Intel 등 제조사 별로 입력해야 하는 명령이 조금씩 차이가 있어, 각 제조사 별로 구분하여 작성 하였습니다.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### 3.1 Dell 13G 서버 ipmi 설정.
+### [3.1 Dell 13G 서버 ipmi 설정.][Title]
 
 #### 3.1.1 Dell 13G ipmi interface의 mode dedicated 확인.
 ```bash
@@ -178,7 +179,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 ```
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### 3.2 Dell 14G 서버 ipmi 설정.
+### [3.2 Dell 14G 서버 ipmi 설정.][Title]
 
 #### 3.2.1 Dell 14G ipmi interface의 mode dedicated 확인.
 ```bash
@@ -276,7 +277,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### 3.3 SuperMicro 서버 ipmi 설정.
+### [3.3 SuperMicro 서버 ipmi 설정.][Title]
 
 #### 3.3.1 SuperMicro ipmi interface의 mode dedicated 확인.
 
@@ -411,7 +412,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### 3.4 Intel 서버 ipmi 설정.
+### [3.4 Intel 서버 ipmi 설정.][Title]
 
 #### 3.4.1 Intel ipmi interface의 mode dedicated 확인.
 
@@ -521,7 +522,7 @@ ID  Name	     Callin  Link Auth	IPMI Msg   Channel Priv Limit
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-## 4. 원격 제어 테스트.
+## [4. 원격 제어 테스트.][Title]
 
 ```bash
 ipmitool -I lanplus -H  <IPMI_IP>  -U ADMIN -P  PassWord  power status
@@ -572,4 +573,4 @@ node10 2019-04-15 10:26:05
 Chassis Power is on
 ```
 
-## end.
+## [end.][Title]
