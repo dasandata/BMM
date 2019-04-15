@@ -94,7 +94,7 @@ ipmitool delloem lan set dedicated
 
 #### 3.1.2 Dell 13G ipmi 네트워크 설정상태 확인.
 ```bash
-ipmitool lan print
+ipmitool lan print 1
 ```
 ##### 출력 예>
 ```
@@ -135,11 +135,11 @@ Bad Password Threshold  : Not Available
 #### 3.1.3 Dell 13G ipmi 네트워크 ip 설정.
 
 ```bash
-ipmitool lan set  ipsrc    static
-ipmitool lan set  ipaddr   192.168.0.xxx
-ipmitool lan set  netmask  255.255.255.0
-ipmitool lan set  defgw ipaddr  192.168.0.1
-ipmitool lan set  access   on
+ipmitool lan set 1 ipsrc    static
+ipmitool lan set 1 ipaddr   192.168.0.xxx
+ipmitool lan set 1 netmask  255.255.255.0
+ipmitool lan set 1 defgw ipaddr  192.168.0.1
+ipmitool lan set 1 access   on
 ```
 
 #### 3.1.4 Dell 13G ipmi 관리자 계정 설정.
@@ -232,11 +232,11 @@ Bad Password Threshold  : Not Available
 #### 3.2.3 Dell 14G ipmi 네트워크 ip 설정.
 
 ```bash
-ipmitool lan set  1  ipsrc    static
-ipmitool lan set  1  ipaddr   192.168.0.xxx
-ipmitool lan set  1  netmask  255.255.255.0
-ipmitool lan set  1  defgw ipaddr  192.168.0.1
-ipmitool lan set  1  access   on
+ipmitool lan set 1 ipsrc    static
+ipmitool lan set 1 ipaddr   192.168.0.xxx
+ipmitool lan set 1 netmask  255.255.255.0
+ipmitool lan set 1 defgw ipaddr  192.168.0.1
+ipmitool lan set 1 access   on
 ```
 
 #### 3.2.4 Dell 14G ipmi 관리자 계정 설정.
@@ -367,11 +367,11 @@ Bad Password Threshold  : Not Available
 #### 3.3.3 SuperMicro ipmi 네트워크 ip 설정.
 
 ```bash
-ipmitool lan set  1  ipsrc    static
-ipmitool lan set  1  ipaddr   192.168.0.xxx
-ipmitool lan set  1  netmask  255.255.255.0
-ipmitool lan set  1  defgw ipaddr  192.168.0.1
-ipmitool lan set  1  access   on
+ipmitool lan set 1 ipsrc    static
+ipmitool lan set 1 ipaddr   192.168.0.xxx
+ipmitool lan set 1 netmask  255.255.255.0
+ipmitool lan set 1 defgw ipaddr  192.168.0.1
+ipmitool lan set 1 access   on
 ```
 
 #### 3.3.4 SuperMicro ipmi 관리자 계정 설정.
@@ -474,11 +474,11 @@ Bad Password Threshold  : Not Available
 #### 3.4.3 Intel ipmi 네트워크 ip 설정.
 
 ```bash
-ipmitool lan set  3  ipsrc    static
-ipmitool lan set  3  ipaddr   192.168.0.xxx
-ipmitool lan set  3  netmask  255.255.255.0
-ipmitool lan set  3  defgw ipaddr  192.168.0.1
-ipmitool lan set  3  access   on
+ipmitool lan set 3 ipsrc    static
+ipmitool lan set 3 ipaddr   192.168.0.xxx
+ipmitool lan set 3 netmask  255.255.255.0
+ipmitool lan set 3 defgw ipaddr  192.168.0.1
+ipmitool lan set 3 access   on
 ```
 
 #### 3.4.4 Intel ipmi 관리자 계정 설정.
