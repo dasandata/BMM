@@ -100,3 +100,42 @@ racadm -r 192.168.0.142 -u root -p calvin  help serveraction
 
 racadm -r 192.168.0.142 -u root -p calvin  serveraction powerstatus
 ```
+
+## Hyper Threading
+```bash
+racadm --nocertwarn -r  192.168.0.xxx  -u root -p calvin   help  BIOS.ProcSettings.ControlledTurbo
+
+> ControlledTurbo           -- Enable or disable CPU Controlled Turbo mode.    
+> Usage                     -- Enabled - Enabled;Disabled - Disabled;ControlledTurboLimitMinus1 - Controlled Turbo Limit Minus 1 Bin;ControlledTurboLimitMinus2 - Controlled Turbo > Limit Minus 2 Bins;ControlledTurboLimitMinus3 - Controlled Turbo Limit Minus 3 Bins;
+> Required License          -- RACADM
+> Dependency                -- NA
+
+racadm --nocertwarn -r  192.168.0.xxx  -u root -p calvin   set BIOS.ProcSettings.ControlledTurbo  Disabled
+racadm --nocertwarn -r  192.168.0.xxx  -u root -p calvin   get BIOS.ProcSettings.ControlledTurbo
+
+> [Key=BIOS.Setup.1-1#ProcSettings]                                            
+> ControlledTurbo=Disabled (Pending Value=Enabled)
+
+racadm --nocertwarn -r  192.168.0.xxx  -u root -p calvin   jobqueue create BIOS.Setup.1-1
+
+> RAC1024: Successfully scheduled a job.                                       
+> Verify the job status using "racadm jobqueue view -i JID_xxxxx" command.
+> Commit JID = JID_xxxxxx
+
+racadm --nocertwarn -r  192.168.0.xxx  -u root -p calvin   jobqueue view
+
+> ParseComplete                                                                
+>
+> -------------------------JOB QUEUE------------------------
+> [Job ID=JID_xxxxxx]
+> Job Name=Configure: BIOS.Setup.1-1
+> Status=Scheduled
+> Start Time=[Now]
+> Expiration Time=[Not Applicable]
+> Message=[JCP001: Task successfully scheduled.]
+> Percent Complete=[0]
+> ----------------------------------------------------------
+
+racadm --nocertwarn -r  192.168.0.xxx  -u root -p calvin   serveraction powercycle
+
+```

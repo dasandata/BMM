@@ -19,7 +19,7 @@ fi
 
 for NUM in 1 2 3
 do echo "NODE $NUM"
-racadm --nocertwarn -r node$NUM.idrac -u root -p 123456qwer! $1
+racadm --nocertwarn -r node$NUM.idrac -u root -p calvin $1
 done
 
 echo "End"
