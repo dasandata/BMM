@@ -112,11 +112,9 @@ if [ ${NFS_STATUS1} -eq 1 ]; then
     exit 1
   else
     RSYNC_Process
-    exit 1
   fi
 else
   RSYNC_Process
-  exit 1
 fi
 
 # End file.
