@@ -1,5 +1,15 @@
 #!/bin/bash
 
+for i in 1 3 6 8
+do
+ racadm --nocertwarn -r 192.168.0.200 -u root -p 123456qwer! set system.PCIESlotLFM.$i.LFMMode 2
+done
+
+echo " Dell T640 Fan speed Down "
+
+
+
+
 ## example  GPU fan speed Down
 
 ## PCIESlotLFM.x.LFMMode 2  //  x = 1, 3, 6, 8
