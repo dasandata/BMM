@@ -32,8 +32,10 @@ directory mask = 770
 ```
 
 # Windows cmd 창에서
-net use
-net use * /delete
+```bash
+net use  
+net use * /delete  
+```
 
 # 2020.03 add
 ```bash
