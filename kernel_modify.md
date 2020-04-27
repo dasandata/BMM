@@ -13,7 +13,7 @@ awk '/menuentry/ && /class/ {count++; print count-1"****"$0 }' /boot/grub/grub.c
 6****   menuentry 'Ubuntu, with Linux 4.4.0-31-generic (recovery mode)' --class ubuntu --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-4.4.0-31-generic-recovery-d506a87d-5f71-4f34-b0b4-c44fab563215' {
 ```
 
-## modify
+## list number 4  modify
 ```bash
 sed -i  's/GRUB_DEFAULT=0/GRUB_DEFAULT=4/g' /etc/default/grub; update-grub
 
