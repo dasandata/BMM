@@ -1,8 +1,8 @@
-# 0. Python 파일  GPU 선언하기
+# 0. Python 파일 GPU 변수 선언하기
 
 ```
-0-1. GPU 번호로 선언
-0-2. GPU / UUID 선언
+0-1. GPU 번호로 변수 선언
+0-2. GPU / UUID 변수 선언
 ```
 
 ## 1. 테스트 파일
@@ -52,7 +52,7 @@ import tensorflow as tf
 [root@Dell-DSS8440-GPU-Test:3_NeuralNetworks]#
 ```
 
-## 2. GPU 번호로 선언 (.py)
+## 2. GPU 번호로 변수 선언 (.py)
 
 ```
 [root@Dell-DSS8440-GPU-Test:3_NeuralNetworks]#
@@ -167,7 +167,7 @@ Thu Mar 26 17:17:21 2020
 +-----------------------------------------------------------------------------+
 ```
 
-## 3. GPU / UUID 선언 (.py)
+## 3. GPU / UUID 변수 선언 (.py)
 
 ```
 [root@Dell-DSS8440-GPU-Test:3_NeuralNetworks]# nvidia-smi -L
