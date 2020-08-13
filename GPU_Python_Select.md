@@ -1,6 +1,6 @@
 # 0. Python 파일  GPU 선언하기
 
-0-1. GPU 번호로 선언
+0-1. GPU 번호로 선언 \n
 0-2. GPU / UUID 선언
 
 
