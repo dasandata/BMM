@@ -34,7 +34,7 @@ ID  Name             Callin  Link Auth  IPMI Msg   Channel Priv Limit
 
 #  ipmitool 에 생성한 4번 계정 (dasan) 패스워드 설정
 ```
-ipmitool user  set  password  4  123456qwer!
+ipmitool user  set  password  4  <PASSWORD>
 Set User Password command successful (user 4)
 ```
 
@@ -45,7 +45,7 @@ Set User Password command successful (user 4)
 
 #  ipmitool 커맨드 를 dasan 계정 테스트 power 상태 확인
 ```
-[root@coma:~]# ipmitool  -I  lanplus   -H coma.ipmi  -U dasan  -P 123456qwer!   power  status
+[root@coma:~]# ipmitool  -I  lanplus   -H coma.ipmi  -U dasan  -P  <PASSWORD>  power  status
 Chassis Power is on
 [root@coma:~]#
 ```
