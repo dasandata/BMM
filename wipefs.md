@@ -1,4 +1,4 @@
-# CIFS mount
+# LVM mount
 
 ## 참조 웹 문서
 https://www.osradar.com/fixed-pvcreate-device-dev-mapper-excluded-by-a-filter/
