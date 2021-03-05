@@ -25,12 +25,6 @@ https://www.osradar.com/fixed-pvcreate-device-dev-mapper-excluded-by-a-filter/
 [root@rubuntu:~]#
 
 [root@rubuntu:~]#
-[root@rubuntu:~]# lvcreate  -l 100%FREE  /dev/mapper/mpathi
-  Volume group "mpathi" not found
-  Cannot process volume group mpathi
-[root@rubuntu:~]#
-
-[root@rubuntu:~]#
 [root@rubuntu:~]# lvcreate  -l 100%FREE dxome-data
 WARNING: zfs_member signature detected on /dev/dxome-data/lvol0 at offset 413696. Wipe it? [y/n]: y
   WARNING: Invalid input 'ny'.
