@@ -1,0 +1,5 @@
+#!/bin/bash
+
+####copy fastq file 
+
+cp /data/program/sample-data/sratoolkit/* .

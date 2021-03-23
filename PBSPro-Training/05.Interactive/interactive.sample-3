@@ -1,0 +1,1 @@
+qsub -I  -l select=1:ncpus=16:mem=16gb

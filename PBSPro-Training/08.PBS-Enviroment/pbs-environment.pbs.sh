@@ -1,0 +1,37 @@
+#!/bin/bash
+#PBS -N print-env-var
+#PBS -l walltime=00:10:00
+#PBS -j oe
+#PBS -m bae
+#PBS -S /bin/bash
+
+module purge
+module load ohpc
+
+#set -x
+
+cd $PBS_O_WORKDIR
+qstat -u $USER -rn
+
+echo TMPDIR=$TMPDIR
+echo PBS_O_HOST=$PBS_O_HOST
+echo PBS_O_QUEUE=$PBS_O_QUEUE
+echo PBS_JOBID=$PBS_JOBID
+echo PBS_JOBNAME=$PBS_JOBNAME
+echo HOME=$PBS_O_HOME
+echo PID=$$
+echo PBS_O_WORKDIR=$PBS_O_WORKDIR
+echo PBS_ENVIRONMENT=$PBS_ENVIRONMENT
+echo PBS_NODEFILE=$PBS_NODFILE
+echo PBS_QUEUE=$PBS_QUEUE
+echo PBS_TASKNUM=$PBS_TASKNUM 
+echo PBS_MOMPORT=$PBS_MOMPORT
+echo PBS_O_LOGNAME=$PBS_O_LOGNAME
+echo PBS_O_LANG=$PBS_O_LANG
+echo PBS_NODENUM=$PBS_NODENUM
+echo PBS_JOBDIR=$PBS_JOBDIR
+echo PBS_O_SHELL=$PBS_O_SHELL
+echo PBS_O_MAIL=$PBS_O_MAIL
+echo PBS_O_SYSTEM=$PBS_O_SYSTEM
+echo PBS_O_PATH=$PBS_O_PATH
+

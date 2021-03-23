@@ -1,0 +1,1 @@
+qsub -I  -l select=20:mpiprocs=160
