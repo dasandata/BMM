@@ -19,7 +19,6 @@ racadm --nocertwarn -r 192.168.0.119 -u root -p 123456qwer! $COMMAND
 racadm get iDRAC.Time.Timezone
 ```
 ```bash
-output line !
 
 [Key=iDRAC.Embedded.1#Time.1]
 Timezone=CST6CDT
@@ -33,7 +32,6 @@ Timezone=CST6CDT
 racadm set iDRAC.Time.Timezone Asia/Seoul
 ```
 ```bash
-output line !
 
 [Key=iDRAC.Embedded.1#Time.1]
 Object value modified successfully
@@ -41,12 +39,11 @@ Object value modified successfully
 
 
 
-## iDRAC Timezone 설정 적용 된 값 확인 
+## iDRAC Timezone 설정 적용 된 값 확인
 ```bash
 racadm get iDRAC.Time.Timezone
 ```
 ```bash
-output line !
 
 [Key=iDRAC.Embedded.1#Time.1]
 Timezone=Asia/Seoul
