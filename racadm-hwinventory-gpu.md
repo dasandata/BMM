@@ -9,7 +9,7 @@ racadm --nocertwarn -r 192.168.0.x -u root -p 123456qwer!
 
 example !
 
-racadm --nocertwarn -r 192.168.0.119 -u root -p 123456qwer! $COMMAND 
+racadm --nocertwarn -r 192.168.0.119 -u root -p 123456qwer! $COMMAND
 
 ```
 
@@ -19,7 +19,7 @@ racadm --nocertwarn -r 192.168.0.119 -u root -p 123456qwer! $COMMAND
 racadm --nocertwarn hwinventory | grep -i Description | tail -49 | head -8 | sort -V
 ```
 ```bash
-output example !
+output line !
 
 Description = GP100GL [Tesla P100 SXM2 16GB]
 Description = GP100GL [Tesla P100 SXM2 16GB]
@@ -36,10 +36,10 @@ DeviceDescription = Video Controller in Slot 6
 
 ## HWinventory - T640 GPU
 ```bash
-racadm hwinventory | grep -i Description | tail -10 | head -8 | sort -V
+racadm --nocertwarn hwinventory | grep -i Description | tail -10 | head -8 | sort -V
 ```
 ```bash
-output example !
+output line !
 
 Description = GA102 [GeForce RTX 3090]
 Description = GA102 [GeForce RTX 3090]
@@ -55,10 +55,10 @@ DeviceDescription = GPU Controller in Slot 8 of Instance 1
 
 ## HWinventory - DSS8440 GPU
 ```bash
-racadm --nocertwarn -r  192.168.0.148   -u root -p 123456qwer!  hwinventory | grep -i Description | tail -44 | head -18 | sort -V
+racadm --nocertwarn  hwinventory | grep -i Description | tail -44 | head -18 | sort -V
 ```
 ```bash
-output example !
+output line !
 
 Description = Integrated Matrox G200eW3 Graphics Controller
 Description = NVIDIA Corporation
