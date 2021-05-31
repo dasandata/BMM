@@ -1,4 +1,4 @@
-# racadm hwinventory
+# racadm hwinventory cli
 
 ```bash
 
