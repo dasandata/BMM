@@ -1,4 +1,12 @@
-# racadm
+# racadm hwinventory
+
+```bash
+
+Dell racadm cli guide web link
+
+https://www.dell.com/support/manuals/en-us/poweredge-m640/idrac_4.00.00.00_racadm/hwinventory?guid=guid-c6325122-f01b-4125-a9f4-075040165e8f&lang=en-us
+
+```
 
 ## 원격지 example
 
