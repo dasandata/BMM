@@ -1,22 +1,22 @@
-[0]: https://github.com/dasandata/BMM/blob/master/racadm.md#dell-racadm-remote-access-controller-admin
+[0]:   racadm.md#dell-racadm-remote-access-controller-admin
 
-[1]: https://github.com/dasandata/BMM/blob/master/racadm.md#-1-%EC%B4%88%EA%B8%B0-%EA%B5%AC%EC%84%B1
-[1.1]: https://github.com/dasandata/BMM/blob/master/racadm.md#-11-interface-%EC%84%A4%EC%A0%95
-[1.2]: https://github.com/dasandata/BMM/blob/master/racadm.md#-12-ip-%EC%84%A4%EC%A0%95
-[1.3]: https://github.com/dasandata/BMM/blob/master/racadm.md#-13-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EB%B3%80%EA%B2%BD
-[1.4]: https://github.com/dasandata/BMM/blob/master/racadm.md#-14-timezone-%EB%B3%80%EA%B2%BD
+[1]:   racadm.md#-1-%EC%B4%88%EA%B8%B0-%EA%B5%AC%EC%84%B1
+[1.1]: racadm.md#-11-interface-%EC%84%A4%EC%A0%95
+[1.2]: racadm.md#-12-ip-%EC%84%A4%EC%A0%95
+[1.3]: racadm.md#-13-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EB%B3%80%EA%B2%BD
+[1.4]: racadm.md#-14-timezone-%EB%B3%80%EA%B2%BD
 
-[2]: https://github.com/dasandata/BMM/blob/master/racadm.md#-2-%EC%A0%9C%EC%96%B4-%EB%B0%8F-bios-%EC%84%A4%EC%A0%95
-[2.1]: https://github.com/dasandata/BMM/blob/master/racadm.md#-21-power-control
-[2.2]: https://github.com/dasandata/BMM/blob/master/racadm.md#-22-hyper-threading
-[2.3]: https://github.com/dasandata/BMM/blob/master/racadm.md#-23-3rdpartycard-pcieslotlfm
-[2.4]: https://github.com/dasandata/BMM/blob/master/racadm.md#-24-hw-inventory
+[2]:   racadm.md#-2-%EC%A0%9C%EC%96%B4-%EB%B0%8F-bios-%EC%84%A4%EC%A0%95
+[2.1]: racadm.md#-21-power-control
+[2.2]: racadm.md#-22-hyper-threading
+[2.3]: racadm.md#-23-3rdpartycard-pcieslotlfm
+[2.4]: racadm.md#-24-hw-inventory
 
-[3]: https://github.com/dasandata/BMM/blob/master/racadm.md#3-%EA%B8%B0%ED%83%80
-[3.1]: https://github.com/dasandata/BMM/blob/master/racadm.md#-31-tsr-log-supportassist-%EC%88%98%EC%A7%91
-[3.2]: https://github.com/dasandata/BMM/blob/master/racadm.md#-32-openhpc-node-%EC%97%90%EC%84%9C-racadm-%EB%AA%85%EB%A0%B9-%EC%82%AC%EC%9A%A9
-[3.3]: https://github.com/dasandata/BMM/blob/master/racadm.md#-33-%EB%B0%98%EB%B3%B5%EB%AC%B8for-%EC%98%88%EC%A0%9C
-[3.4]: https://github.com/dasandata/BMM/blob/master/racadm.md#-34-racadm-docker
+[3]:   racadm.md#3-%EA%B8%B0%ED%83%80
+[3.1]: racadm.md#-31-tsr-log-supportassist-%EC%88%98%EC%A7%91
+[3.2]: racadm.md#-32-openhpc-node-%EC%97%90%EC%84%9C-racadm-%EB%AA%85%EB%A0%B9-%EC%82%AC%EC%9A%A9
+[3.3]: racadm.md#-33-%EB%B0%98%EB%B3%B5%EB%AC%B8for-%EC%98%88%EC%A0%9C
+[3.4]: racadm.md#-34-racadm-docker
 
 # Dell RACADM (Remote Access Controller Admin)
 

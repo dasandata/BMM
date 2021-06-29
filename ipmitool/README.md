@@ -1,8 +1,8 @@
-[0]: https://github.com/dasandata/BMM/tree/master/ipmitool
-[1]: https://github.com/dasandata/BMM/blob/master/ipmitool/ipmi_interface_setup.md
-[2]: https://github.com/dasandata/BMM/blob/master/ipmitool/ipmitool-useradd.md
-[3]: https://github.com/dasandata/BMM/blob/master/ipmitool/Supermicro_fanspeed.md
-[4]: https://github.com/dasandata/BMM/blob/master/ipmitool/qct_fanspeed.md
+[0]: README.md
+[1]: ipmi_interface_setup.md
+[2]: ipmitool-useradd.md
+[3]: Supermicro_fanspeed.md
+[4]: qct_fanspeed.md
 
 ## 목차
 
