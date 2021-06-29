@@ -1,6 +1,6 @@
-#  ipmitool user list 확인
-```
-[root@coma:~]# ipmitool user list 1
+## ## ipmitool user list 확인
+```bash
+[root@dasandata:~]# ipmitool user list 1
 ID  Name             Callin  Link Auth  IPMI Msg   Channel Priv Limit
 1                    true    false      false      Unknown (0x00)
 2   ADMIN            false   false      true       ADMINISTRATOR
@@ -14,11 +14,11 @@ ID  Name             Callin  Link Auth  IPMI Msg   Channel Priv Limit
 10                   true    false      false      Unknown (0x00)
 ```
 
-#  ipmitool user add ( ex 4번 ) 생성 후 확인
-```
-[root@coma:~]# ipmitool user  set  name  4  dasan
-[root@coma:~]#
-[root@coma:~]# ipmitool user  list 1
+## ## ipmitool user add ( ex 4번 ) 생성 후 확인
+```bash
+[root@dasandata:~]# ipmitool user  set  name  4  dasan
+[root@dasandata:~]#
+[root@dasandata:~]# ipmitool user  list 1
 ID  Name             Callin  Link Auth  IPMI Msg   Channel Priv Limit
 1                    true    false      false      Unknown (0x00)
 2   ADMIN            false   false      true       ADMINISTRATOR
@@ -32,27 +32,27 @@ ID  Name             Callin  Link Auth  IPMI Msg   Channel Priv Limit
 10                   true    false      false      Unknown (0x00)
 ```
 
-#  ipmitool 에 생성한 4번 계정 (dasan) 패스워드 설정
-```
+## ## ipmitool 에 생성한 4번 계정 (dasan) 패스워드 설정
+```bash
 ipmitool user  set  password  4  <PASSWORD>
 Set User Password command successful (user 4)
 ```
 
-#  ipmitool 4 번 계정 (dasan) 활성화
-```
-[root@coma:~]# ipmitool user  enable 4
+## ## ipmitool 4 번 계정 (dasan) 활성화
+```bash
+[root@dasandata:~]# ipmitool user  enable 4
 ```
 
-#  ipmitool 커맨드 를 dasan 계정 테스트 power 상태 확인
-```
-[root@coma:~]# ipmitool  -I  lanplus   -H coma.ipmi  -U dasan  -P  <PASSWORD>  power  status
+## ## ipmitool 커맨드 를 dasan 계정 테스트 power 상태 확인
+```bash
+[root@dasandata:~]# ipmitool  -I  lanplus   -H coma.ipmi  -U dasan  -P  <PASSWORD>  power  status
 Chassis Power is on
-[root@coma:~]#
+[root@dasandata:~]#
 ```
 
-#  bmc-config 살펴보기
-```
-[root@coma:~]# bmc-config  --checkout --section=user4
+## ## bmc-config 살펴보기
+```bash
+[root@dasandata:~]# bmc-config  --checkout --section=user4
 Section User4
         ## Give Username
         Username                                      dasan
@@ -75,12 +75,12 @@ Section User4
 EndSection
 ```
 
-#  bmc Port 설정 및 로그인 유저 지정
-```
-[root@coma:~]# ipmitool channel setaccess 1 4  link=on  callin=off ipmi=on
+## ## bmc Port 설정 및 로그인 유저 지정
+```bash
+[root@dasandata:~]# ipmitool channel setaccess 1 4  link=on  callin=off ipmi=on
 Set User Access (channel 1 id 4) successful.
 
-[root@coma:~]# bmc-config  --checkout --section=user4
+[root@dasandata:~]# bmc-config  --checkout --section=user4
 Section User4
         ## Give Username
         Username                                      dasan
@@ -101,5 +101,5 @@ Section User4
         ## Possible values: Yes/No
         SOL_Payload_Access                            Yes
 EndSection
-[root@coma:~]#
+[root@dasandata:~]#
 ```
