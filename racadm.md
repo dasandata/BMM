@@ -1,43 +1,43 @@
-[0]: http://google.com
+[0]: https://github.com/dasandata/BMM/blob/master/racadm.md#dell-racadm-remote-access-controller-admin
 
-[1]: http://google.com
-[1.1]: http://google.com
-[1.2]: http://google.com
-[1.3]: http://google.com
-[1.4]: http://google.com
+[1]: https://github.com/dasandata/BMM/blob/master/racadm.md#-1-%EC%B4%88%EA%B8%B0-%EA%B5%AC%EC%84%B1
+[1.1]: https://github.com/dasandata/BMM/blob/master/racadm.md#-11-interface-%EC%84%A4%EC%A0%95
+[1.2]: https://github.com/dasandata/BMM/blob/master/racadm.md#-12-ip-%EC%84%A4%EC%A0%95
+[1.3]: https://github.com/dasandata/BMM/blob/master/racadm.md#-13-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EB%B3%80%EA%B2%BD
+[1.4]: https://github.com/dasandata/BMM/blob/master/racadm.md#-14-timezone-%EB%B3%80%EA%B2%BD
 
-[2]: http://google.com
-[2.1]: http://google.com
-[2.2]: http://google.com
-[2.3]: http://google.com
-[2.4]: http://google.com
+[2]: https://github.com/dasandata/BMM/blob/master/racadm.md#-2-%EC%A0%9C%EC%96%B4-%EB%B0%8F-bios-%EC%84%A4%EC%A0%95
+[2.1]: https://github.com/dasandata/BMM/blob/master/racadm.md#-21-power-control
+[2.2]: https://github.com/dasandata/BMM/blob/master/racadm.md#-22-hyper-threading
+[2.3]: https://github.com/dasandata/BMM/blob/master/racadm.md#-23-3rdpartycard-pcieslotlfm
+[2.4]: https://github.com/dasandata/BMM/blob/master/racadm.md#-24-hw-inventory
 
-[3]: http://google.com
-[3.1]: http://google.com
-[3.2]: http://google.com
-[3.3]: http://google.com
-[3.4]: http://google.com
+[3]: https://github.com/dasandata/BMM/blob/master/racadm.md#3-%EA%B8%B0%ED%83%80
+[3.1]: https://github.com/dasandata/BMM/blob/master/racadm.md#-31-tsr-log-supportassist-%EC%88%98%EC%A7%91
+[3.2]: https://github.com/dasandata/BMM/blob/master/racadm.md#-32-openhpc-node-%EC%97%90%EC%84%9C-racadm-%EB%AA%85%EB%A0%B9-%EC%82%AC%EC%9A%A9
+[3.3]: https://github.com/dasandata/BMM/blob/master/racadm.md#-33-%EB%B0%98%EB%B3%B5%EB%AC%B8for-%EC%98%88%EC%A0%9C
+[3.4]: https://github.com/dasandata/BMM/blob/master/racadm.md#-34-racadm-docker
 
 # Dell RACADM (Remote Access Controller Admin)
 
-## [목차]
-[1. 초기구성][1]
-[1.1 Interface 설정][1.1]
-[1.2 IP 설정][1.2]
-[1.3 패스워드 변경][1.3]
-[1.4 timezone 변경][1.4]
+## [목차]  
+[1. 초기구성][1]  
+[1.1 Interface 설정][1.1]  
+[1.2 IP 설정][1.2]  
+[1.3 패스워드 변경][1.3]  
+[1.4 timezone 변경][1.4]  
 
-[2. 제어 및 BIOS 설정][2]
-[2.1 Power Control][2.1]
-[2.2 Hyper Threading][2.2]
-[2.3 3rdPartyCard PCIESlotLFM][2.3]
-[2.4 H/W Inventory][2.4]
+[2. 제어 및 BIOS 설정][2]  
+[2.1 Power Control][2.1]  
+[2.2 Hyper Threading][2.2]  
+[2.3 3rdPartyCard PCIESlotLFM][2.3]  
+[2.4 H/W Inventory][2.4]  
 
-[3. 기타][3]
-[3.1 TSR Log (supportassist) 수집][3.1]
-[3.2 OpenHPC node 에서 racadm 명령 사용][3.2]
-[3.3 반복문(for) 예제][3.3]
-[3.4 Racadm Docker][3.4]
+[3. 기타][3]  
+[3.1 TSR Log (supportassist) 수집][3.1]  
+[3.2 OpenHPC node 에서 racadm 명령 사용][3.2]  
+[3.3 반복문(for) 예제][3.3]  
+[3.4 Racadm Docker][3.4]  
 
 
 ## ## [1. 초기 구성][0]
@@ -65,7 +65,7 @@ Object value modified successfully
 Selection=LOM2
 ```
 
-### ### [idrac6 (racadm6) Nic Selection][0]
+#### #### [idrac6 (racadm6) Nic Selection][0]
 ```bash
 [root@dasandata:~]#
 [root@dasandata:~]# racadm getconfig -g cfgLAnNetworking -o cfgNicSelection
