@@ -22,10 +22,9 @@ vi /etc/docker/daemon.json
 }
 
 # 만들어진 파일을 ohpc 이미지에 동일하게 적용합니다.
-CHROOT=/opt/ohpc/admin/images/이미지 이름
-
+# CHROOT=/opt/ohpc/admin/images/이미지 이름
 cp /etc/docker/daemon.json  $CHROOT/etc/docker
 
 # 변경 후 docker ip가 변경이 되었는지 확인 합니다.
- 
+
 ```
