@@ -2,6 +2,7 @@
 ### docker network ip change 도커에서 디폴트 네트워크 환경 변경. 
 ### docker network 가 172.17.0.0/16 으로 되어있을때, 다른 내부 아이피 172.17.0.0/16 으로 통신이 안되는 라우팅 문제 발생
 ### 아래와 같이 IP 변경을 진행합니다.
+### 변경 후 docker service를 재 시작 하면 적용 됩니다.
 
 ```bash
 # daemon.json은 docker설치시 자동으로 생성 되는 파일이 아닙니다.
