@@ -1,4 +1,4 @@
-# Firefox에 Proxy 설정을 통해 기존 X Forwarding 보다 편리하게 사용 가능합니다.
+# ssh bind address for web broser proxy 
 
 ## Firefox 실행 후 설정
 ![MicrosoftTeams-image](https://user-images.githubusercontent.com/65653117/124881359-347f8800-e00a-11eb-9756-b9f9c88e4dbb.png)
