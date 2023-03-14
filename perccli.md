@@ -1,7 +1,7 @@
 ## Dell Perccli
 
 ### Install
-######   O    L    D    ######
+--------OLD--------
 ```bash
 cd /root  
 mkdir raid_manager  
@@ -18,7 +18,7 @@ yum -y install perccli-007.0127.0000.0000-1.noarch.rpm
 rpm -ql perccli-007.0127.0000.0000-1
 ```
 
-######   N    E    W    ######
+--------NEW--------
 **Type Debian**
    su -
    apt install -y wget alien
