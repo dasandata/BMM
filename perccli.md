@@ -1,6 +1,6 @@
 ## Dell Perccli
 
-### Install
+### Install OLD
 --------OLD--------
 ```bash
 cd /root  
@@ -18,8 +18,8 @@ yum -y install perccli-007.0127.0000.0000-1.noarch.rpm
 rpm -ql perccli-007.0127.0000.0000-1
 ```
 
---------NEW--------
-**Type Debian**
+### Install NEW
+--Type Debian--
    su -
    apt install -y wget alien
    cd /root
@@ -31,7 +31,7 @@ rpm -ql perccli-007.0127.0000.0000-1
    echo "PATH=$PATH:/opt/MegaRAID/perccli/" >> /etc/profile
    source /etc/profile
 
-**Type Debian**
+--Type Debian--
    su -
    yum install -y wget
    cd /root
