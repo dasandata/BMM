@@ -33,7 +33,7 @@ rpm -ql perccli-007.0127.0000.0000-1
    source /etc/profile
    ```
 
---Type Debian--
+--Type RedHat--
 ```bash
    su -
    yum install -y wget
