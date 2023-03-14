@@ -1,6 +1,7 @@
 ## Dell Perccli
 
 ### Install
+#####################################   O    L    D    ########################################
 ```bash
 cd /root  
 mkdir raid_manager  
@@ -16,10 +17,36 @@ yum -y install perccli-007.0127.0000.0000-1.noarch.rpm
 ```bash
 rpm -ql perccli-007.0127.0000.0000-1
 ```
+###############################################################################################
+#####################################   N    E    W    ########################################
+**Type Debian**
+->   su -
+->   apt install -y wget alien
+->   cd /root
+->   wget https://dl.dell.com/FOLDER04470715M/1/perccli_7.1-007.0127_linux.tar.gz
+->   tar perccli*.tar.gz
+->   cd Linux
+->   alien -c *.rpm
+->   dpkg -i *.deb
+->   echo "PATH=$PATH:/opt/MegaRAID/perccli/" >> /etc/profile
+->   source /etc/profile
+
+**Type Debian**
+->   su -
+->   yum install -y wget
+->   cd /root
+->   wget https://dl.dell.com/FOLDER04470715M/1/perccli_7.1-007.0127_linux.tar.gz
+->   tar perccli*.tar.gz
+->   cd Linux
+->   rpm -ivh *.rpm
+->   echo "PATH=$PATH:/opt/MegaRAID/perccli/" >> /etc/profile
+->   source /etc/profile
 
 ### Test
 ```bash
 /opt/MegaRAID/perccli/perccli64
+or
+perccli64
 ```
 ***
 
