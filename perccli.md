@@ -20,9 +20,9 @@ rpm -ql perccli-007.0127.0000.0000-1
 
 ### Install NEW
 --Type Debian--
-   su -
-   apt install -y wget alien
-   cd /root
+su -
+apt install -y wget alien
+cd /root
    wget https://dl.dell.com/FOLDER04470715M/1/perccli_7.1-007.0127_linux.tar.gz
    tar perccli*.tar.gz
    cd Linux
