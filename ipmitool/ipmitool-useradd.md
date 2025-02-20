@@ -43,6 +43,11 @@ Set User Password command successful (user 4)
 [root@dasandata:~]# ipmitool user  enable 4
 ```
 
+## ## ipmitool 4 번 계정 IPMI Msg 활성화 
+```bash
+ipmitool channel setaccess 1   4   link=on ipmi=on callin=on privilege=4
+```
+
 ## ## ipmitool 커맨드 를 dasan 계정 테스트 power 상태 확인
 ```bash
 [root@dasandata:~]# ipmitool  -I  lanplus   -H coma.ipmi  -U dasan  -P  <PASSWORD>  power  status
